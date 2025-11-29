@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ECHO Health System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="hud" class="hud hidden">
+        <div class="health-container">
+            <div class="mental-health">
+                <div class="label">Mental Health</div>
+                <div class="bar-container">
+                    <div class="bar mental-bar" id="mentalBar">
+                        <span id="mentalText">100%</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="addictions" id="addictionsContainer">
+                <!-- Dynamic addiction bars -->
+            </div>
+        </div>
+    </div>
+    
+    <div id="organMenu" class="modal hidden">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Available Organs</h2>
+            <div id="organList"></div>
+        </div>
+    </div>
+    
+    <div id="therapyUI" class="modal hidden">
+        <div class="modal-content therapy">
+            <h2>Therapy Session</h2>
+            <div class="progress-bar">
+                <div class="progress" id="therapyProgress"></div>
+            </div>
+            <p>Remaining: <span id="therapyTime">0:00</span></p>
+        </div>
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

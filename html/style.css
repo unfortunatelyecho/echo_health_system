@@ -1,0 +1,218 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow: hidden;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* HUD */
+.hud {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 15px;
+    border-radius: 10px;
+    min-width: 250px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.health-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.mental-health,
+.addiction-item {
+    margin-bottom: 10px;
+}
+
+.label {
+    color: #fff;
+    font-size: 12px;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.bar-container {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    overflow: hidden;
+    height: 25px;
+    position: relative;
+}
+
+.bar {
+    height: 100%;
+    transition: width 0.5s ease, background-color 0.5s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-weight: bold;
+    font-size: 11px;
+}
+
+.mental-bar {
+    background: linear-gradient(90deg, #00ff00, #90ee90);
+}
+
+.addiction-bar {
+    background: linear-gradient(90deg, #ff0000, #ff6b6b);
+}
+
+/* Modal */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+.modal-content {
+    background: linear-gradient(135deg, #1e1e1e, #2d2d2d);
+    padding: 30px;
+    border-radius: 15px;
+    max-width: 600px;
+    width: 90%;
+    max-height: 80vh;
+    overflow-y: auto;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.modal-content h2 {
+    color: #fff;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.close:hover {
+    color: #fff;
+}
+
+/* Organ List */
+#organList {
+    display: grid;
+    gap: 15px;
+}
+
+.organ-item {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 15px;
+    border-radius: 10px;
+    border-left: 4px solid #00ff00;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.organ-item:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateX(5px);
+}
+
+.organ-item h3 {
+    color: #00ff00;
+    margin-bottom: 10px;
+}
+
+.organ-item p {
+    color: #ccc;
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+.organ-quality {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+.quality-high {
+    background: #00ff00;
+    color: #000;
+}
+
+.quality-medium {
+    background: #ffaa00;
+    color: #000;
+}
+
+.quality-low {
+    background: #ff0000;
+    color: #fff;
+}
+
+/* Therapy UI */
+.therapy {
+    text-align: center;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 30px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    overflow: hidden;
+    margin: 20px 0;
+}
+
+.progress {
+    height: 100%;
+    background: linear-gradient(90deg, #00ff00, #00aa00);
+    width: 0%;
+    transition: width 0.5s ease;
+}
+
+.therapy p {
+    color: #fff;
+    font-size: 18px;
+}
+
+/* Scrollbar */
+.modal-content::-webkit-scrollbar {
+    width: 8px;
+}
+
+.modal-content::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+}
+
+.modal-content::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+}
+
+.modal-content::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
